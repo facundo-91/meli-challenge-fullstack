@@ -1,15 +1,11 @@
 import { useRouter } from "next/router";
-import SearchResults from "../../components/SearchResults";
+import SearchMain from "../../components/SearchMain";
 
 const Search = () => {
 	const router = useRouter();
 	const { searchQuery } = router.query;
 
-	return (
-		<div>
-			<SearchResults searchInput={searchQuery} />
-		</div>
-	);
+	return <SearchMain searchQuery={searchQuery} />;
 };
 
 export default Search;

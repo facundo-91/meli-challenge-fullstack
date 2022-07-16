@@ -3,9 +3,9 @@ import { ApolloProvider } from "@apollo/client";
 import client from "../utils/apollo-client";
 import "../styles/global.css";
 
-const App = ({ Component, pageProps }) => {
-	const NavBar = dynamic(() => import("../components/NavBar"), { ssr: false });
+const NavBar = dynamic(() => import("../components/NavBar"), { ssr: false });
 
+const App = ({ Component, pageProps }) => {
 	return (
 		<ApolloProvider client={client}>
 			<NavBar />

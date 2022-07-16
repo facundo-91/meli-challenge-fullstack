@@ -7,9 +7,9 @@ export const resolvers = {
 					response.results.slice(0, 10).map((rawProduct) => ({
 						id: rawProduct.id,
 						title: rawProduct.title,
-						image: rawProduct.thumbnail,
+						image: rawProduct.thumbnail.replace("I.jpg", "O.jpg"),
 						price: rawProduct.price,
-						location: rawProduct.address.state_name,
+						free_shipping: rawProduct.shipping.free_shipping,
 					})),
 				),
 		product: (_, args) =>

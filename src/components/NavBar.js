@@ -12,13 +12,9 @@ const NavBar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const router = useRouter();
 
-	const checkViewport = () => {
-		setIsDesktop(window.innerWidth >= 1024);
-	};
-
 	const submitSearch = (e) => {
-		e.preventDefault();
-		if (searchInput > 0) {
+		if (searchInput.length > 0) {
+			e.preventDefault();
 			router.push(`/search/${searchInput}`);
 		}
 	};
@@ -28,6 +24,10 @@ const NavBar = () => {
 	};
 
 	useEffect(() => {
+		const checkViewport = () => {
+			setIsDesktop(window.innerWidth >= 1024);
+		};
+
 		window.addEventListener("resize", checkViewport);
 
 		return () => window.removeEventListener("resize", checkViewport);
@@ -35,7 +35,7 @@ const NavBar = () => {
 
 	const HamburgerMenu = () => {
 		return (
-			<div className="relative border-t border-[#e5d850] before:absolute before:-top-1.5 before:right-[62px] before:h-2.5 before:w-2.5 before:rotate-45 before:border before:border-transparent before:border-t-[#e5d850] before:border-l-[#e5d850] before:bg-meli-yellow before:content-['']">
+			<nav className="relative border-t border-[#e5d850] shadow-[0_1px_1px_0_rgb(0,0,0,10%)] before:absolute before:-top-1.5 before:right-[62px] before:h-2.5 before:w-2.5 before:rotate-45 before:border before:border-transparent before:border-t-[#e5d850] before:border-l-[#e5d850] before:bg-meli-yellow before:content-['']">
 				<div className="py-3 px-4">
 					<div className="float-left mr-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#ededed]">
 						<svg height="35" width="28">
@@ -63,25 +63,25 @@ const NavBar = () => {
 					<ul className="py-4 text-sm [&>li]:cursor-pointer [&>li]:py-1 [&>li>div]:min-h-[39px] [&>li>div]:py-2 [&>li>div]:pl-[26px] [&>li>div]:pr-5 [&>li>div]:font-semibold [&>li>div]:leading-[23px]">
 						<li className="bg-[#f7f7f7] text-meli-blue">
 							<div className="">
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Inicio</span>
 							</div>
 						</li>
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Ofertas</span>
 							</div>
 						</li>
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Historial</span>
 							</div>
 						</li>
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Ayuda</span>
 							</div>
 						</li>
@@ -89,31 +89,31 @@ const NavBar = () => {
 					<ul className="py-4 text-sm [&>li]:cursor-pointer [&>li]:py-1 [&>li>div]:min-h-[39px] [&>li>div]:py-2 [&>li>div]:pl-[26px] [&>li>div]:pr-5 [&>li>div]:font-semibold [&>li>div]:leading-[23px]">
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Supermercado</span>
 							</div>
 						</li>
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Moda</span>
 							</div>
 						</li>
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Más vendidos</span>
 							</div>
 						</li>
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Tiendas oficiales</span>
 							</div>
 						</li>
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Categorías</span>
 							</div>
 						</li>
@@ -121,13 +121,13 @@ const NavBar = () => {
 					<ul className="py-4 text-sm [&>li]:cursor-pointer [&>li]:py-1 [&>li>div]:min-h-[39px] [&>li>div]:py-2 [&>li>div]:pl-[26px] [&>li>div]:pr-5 [&>li>div]:font-semibold [&>li>div]:leading-[23px]">
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Resumen</span>
 							</div>
 						</li>
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>Vender</span>
 							</div>
 						</li>
@@ -135,18 +135,18 @@ const NavBar = () => {
 					<ul className="py-4 text-sm [&>li]:cursor-pointer [&>li]:py-1 [&>li>div]:min-h-[39px] [&>li>div]:py-2 [&>li>div]:pl-[26px] [&>li>div]:pr-5 [&>li>div]:font-semibold [&>li>div]:leading-[23px]">
 						<li>
 							<div>
-								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:antialiased before:content-['']" />
+								<span className="float-left mr-[18px] inline-block h-5 w-5 text-xl leading-[23px] before:text-center before:font-navigation before:font-normal before:content-['']" />
 								<span>¡Comprá y vendé con la app!</span>
 							</div>
 						</li>
 					</ul>
 				</div>
-			</div>
+			</nav>
 		);
 	};
 
 	return (
-		<nav className="bg-meli-yellow text-[#333]">
+		<header className="bg-meli-yellow text-[#333] antialiased">
 			<div className="mx-auto max-w-[1200px]">
 				<div className="flex h-12 items-center lg:h-14">
 					<Link href="/">
@@ -161,19 +161,21 @@ const NavBar = () => {
 					<form
 						className="relative z-10 flex h-full grow items-center lg:left-[35px]"
 						onSubmit={submitSearch}>
-						<div className="relative flex w-full rounded-sm shadow lg:max-w-[600px]">
+						<div className="relative flex w-full shadow-[0_1px_2px_0_rgb(0,0,0,20%)] lg:max-w-[600px]">
 							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 lg:hidden">
 								<span className="font-navigation text-[13px] leading-[18px] text-[#aaa] before:content-['\EA2A']" />
 							</div>
 							<input
-								className="h-8 w-full border-none pl-9 pt-[5px] pb-[7px] pr-1.5 placeholder:font-thin placeholder:text-black placeholder:text-opacity-25 focus:outline-offset-0 lg:h-10 lg:pt-[7px] lg:pr-[60px] lg:pb-[9px] lg:pl-[15px] lg:placeholder:font-normal"
+								className="h-8 w-full rounded-sm border-none pl-9 pt-[5px] pb-[7px] pr-3.5 outline-none placeholder:font-thin placeholder:text-black placeholder:text-opacity-25 focus:outline-offset-0 lg:h-10 lg:rounded-tr-none lg:rounded-br-none lg:pt-[7px] lg:pb-[9px] lg:pl-[15px] lg:placeholder:font-normal"
 								placeholder={isDesktop ? "Buscar productos, marcas y más..." : "Estoy buscando..."}
 								type="search"
 								value={searchInput}
 								onChange={(e) => setSearchInput(e.target.value)}
 							/>
-							<button className="hidden w-[46px] bg-white pt-px lg:block" type="submit">
-								<div className="h-[26px] border-l border-[#e6e6e6] bg-white">
+							<button
+								className="hidden w-[46px] items-center rounded-tr-sm rounded-br-sm bg-white pt-px lg:flex"
+								type="submit">
+								<div className="h-[26px] w-full border-l border-[#e6e6e6] bg-white">
 									<span className="h-full font-navigation text-[#666] before:content-['']" />
 								</div>
 							</button>
@@ -202,14 +204,14 @@ const NavBar = () => {
 						/>
 					</div>
 					<div className="flex h-12 w-[45px] items-center justify-center lg:hidden">
-						<span className="font-navigation text-lg leading-[50px] antialiased before:content-['\EA1F'] lg:text-base lg:leading-[27px]" />
+						<span className="font-navigation text-lg leading-[50px] before:content-['\EA1F'] lg:text-base lg:leading-[27px]" />
 					</div>
 				</div>
 				{isMenuOpen ? (
 					<HamburgerMenu />
 				) : (
 					<div className="flex items-center border-t border-black border-opacity-10 text-[#736c28] lg:h-11 lg:items-start lg:border-none lg:pt-[5px] lg:text-[#333]">
-						<span className="ml-3 mr-2 font-navigation text-base antialiased before:content-[''] lg:text-[23px] lg:before:content-['']" />
+						<span className="ml-3 mr-2 font-navigation text-base before:content-[''] lg:text-[23px] lg:before:content-['']" />
 						<div className="flex-1 lg:flex lg:flex-initial lg:flex-col">
 							<span className="text-[13px] leading-[38px] lg:text-xs lg:leading-none lg:text-black lg:text-opacity-50">
 								Enviar a
@@ -232,13 +234,13 @@ const NavBar = () => {
 								<li>Ingresá</li>
 								<li>Mis compras</li>
 							</ul>
-							<span className="ml-5 mr-1.5 cursor-pointer font-navigation text-base leading-[27px] antialiased before:content-['\EA1F'] hover:text-black" />
+							<span className="ml-5 mr-1.5 cursor-pointer font-navigation text-base leading-[27px] before:content-['\EA1F'] hover:text-black" />
 						</div>
 						<span className="mx-4 h-2 w-2 -rotate-45 border-t-0 border-r-2 border-b-2 border-l-0 border-[#c1b74d] lg:hidden" />
 					</div>
 				)}
 			</div>
-		</nav>
+		</header>
 	);
 };
 

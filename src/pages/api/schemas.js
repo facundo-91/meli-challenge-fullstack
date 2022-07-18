@@ -8,6 +8,11 @@ export const typeDefs = gql`
 		price: Float
 		location: String
 		free_shipping: Boolean
+		product_id: String
+		sold_quantity: Int
+		condition: String
+		pictures: [String]
+		short_description: String
 	}
 	type Query {
 		product(id: ID!): Product

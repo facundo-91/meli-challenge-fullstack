@@ -36,7 +36,7 @@ export const resolvers = {
 				.then((res) => res.json())
 				.then((rawProduct) => ({
 					sold_quantity: rawProduct.sold_quantity,
-					short_description: rawProduct.short_description.content,
+					short_description: rawProduct.short_description?.content,
 				}));
 
 			return { ...productData, ...productData2 };

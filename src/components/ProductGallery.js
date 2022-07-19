@@ -1,38 +1,63 @@
 import Image from "next/image";
+import { Fragment, useState } from "react";
 
 const ProductGallery = ({ pictures }) => {
+	const [selectedPicUrl, setSelectedPicUrl] = useState(pictures[0]);
+
+	const handleChange = (e) => {
+		const { value } = e.target;
+
+		setSelectedPicUrl(pictures[value]);
+	};
+
 	return (
-		<div className="relative h-full min-h-[500px] w-[486px]">
-			<div className="mt-4 ml-4 h-auto w-full">
+		<div className="h-full min-h-[500px] w-[486px]">
+			<div className="relative mt-4 ml-4 h-auto w-full">
 				<div className="absolute top-0 left-[50px] mt-6 h-full min-h-[500px] w-[410px] p-4">
 					<Image
 						alt=""
 						height="500"
 						layout="responsive"
 						objectFit="contain"
-						src={pictures[0]}
+						src={selectedPicUrl}
 						width="500"
 					/>
 				</div>
-				<div className="[&>div:first-child>div>div]:border-2 [&>div:first-child>div>div]:border-meli-blue [&>div:first-child>div>div]:border-opacity-100">
-					{pictures.map((pic, i) => {
+				<div>
+					{pictures.slice(0, 3).map((pic, i) => {
 						return (
-							<div key={i} className="mb-2">
-								<div className="inline-block">
-									<div className="rounded border border-black border-opacity-25">
-										<div className="h-12 w-12 p-0.5">
-											<Image
-												alt=""
-												height="44"
-												layout="responsive"
-												objectFit="contain"
-												src={pic}
-												width="44"
-											/>
+							<Fragment key={i}>
+								<input
+									className="hidden"
+									defaultChecked={i === 0}
+									id={pic.slice(27, -4)}
+									name="gallery-radio"
+									type="radio"
+									value={i}
+									onChange={(e) => handleChange(e)}
+								/>
+								<span className="mb-2 block ">
+									<label htmlFor={pic.slice(27, -4)}>
+										<div
+											className={`inline-flex cursor-pointer rounded ${
+												pic === selectedPicUrl
+													? "border-2 border-meli-blue border-opacity-100"
+													: "border border-black border-opacity-25"
+											}`}>
+											<div className={`h-12 w-12 p-0.5 ${pic === selectedPicUrl ? "-m-px" : ""}`}>
+												<Image
+													alt=""
+													height="44"
+													layout="responsive"
+													objectFit="contain"
+													src={pic}
+													width="44"
+												/>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
+									</label>
+								</span>
+							</Fragment>
 						);
 					})}
 				</div>

@@ -1,8 +1,8 @@
 const ProductPaymentMethods = () => {
 	return (
 		<div className="flex flex-wrap">
-			<div className="flex w-full flex-wrap border-b border-black border-opacity-10 py-10 px-4">
-				<h3 className="mb-6 w-full text-xl">Medios de pago</h3>
+			<div className="flex w-full flex-wrap border-b border-black border-opacity-10 py-10 px-4 lg:border-none lg:pt-8 lg:pb-6">
+				<h3 className="mb-6 w-full text-xl lg:text-lg">Medios de pago</h3>
 				<div className="w-full">
 					<p className="leading-3">Hasta 12 cuotas sin tarjeta</p>
 					<div className="mt-3 flex flex-wrap items-center">

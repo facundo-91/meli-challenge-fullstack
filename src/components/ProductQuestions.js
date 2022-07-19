@@ -1,9 +1,9 @@
 const ProductQuestions = () => {
 	return (
 		<div className="flex">
-			<div className="py-10 px-4">
-				<h2 className="text-xl leading-tight">Preguntas y respuestas</h2>
-				<div className="mt-6">
+			<div className="py-10 px-4 lg:py-0 lg:px-[45px]">
+				<h2 className="text-xl leading-tight lg:text-2xl">Preguntas y respuestas</h2>
+				<div className="mt-6 lg:mt-10">
 					<h3 className="pb-[18px] text-lg font-semibold leading-tight text-black text-opacity-90">
 						¿Qué querés saber?
 					</h3>

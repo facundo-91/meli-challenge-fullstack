@@ -1,9 +1,11 @@
 const ProductSellerInfo = ({ location }) => {
 	return (
 		<>
-			<div className="mt-10 flex">
+			<div className="mt-10 flex border-b border-black border-opacity-10 pb-10 lg:mt-8 lg:border-none lg:pb-6">
 				<div className="w-full px-4">
-					<h3 className="mb-6 text-xl text-black text-opacity-90">Información sobre el vendedor</h3>
+					<h3 className="mb-6 text-xl text-black text-opacity-90 lg:text-lg">
+						Información sobre el vendedor
+					</h3>
 					<div className="w-full text-black text-opacity-90">
 						<div className="mb-5 flex">
 							<figure className="mt-0.5 mr-2.5 w-5 text-center">
@@ -50,7 +52,7 @@ const ProductSellerInfo = ({ location }) => {
 							<ul className="flex [&>li]:relative [&>li]:flex [&>li]:flex-col [&>li]:items-center [&>li]:px-[5px] [&>li]:text-center [&>li]:text-xs [&>li]:leading-none [&>li>p]:mt-2 [&>li>p]:leading-none">
 								<li className="">
 									<strong className="text-2xl leading-[1.2] text-black">12345</strong>
-									<p className="">Ventas en los últimos 60 días</p>
+									<p className="font-light">Ventas en los últimos 60 días</p>
 								</li>
 								<li>
 									<strong className="inline w-7 pt-[3px]">
@@ -69,7 +71,7 @@ const ProductSellerInfo = ({ location }) => {
 											</svg>
 										</div>
 									</strong>
-									<p className="">Brinda buena atención</p>
+									<p className="font-light">Brinda buena atención</p>
 								</li>
 								<li>
 									<strong className="inline w-7 pt-[3px]">
@@ -88,7 +90,7 @@ const ProductSellerInfo = ({ location }) => {
 											</svg>
 										</div>
 									</strong>
-									<p>Despacha sus productos a tiempo</p>
+									<p className="font-light">Despacha sus productos a tiempo</p>
 								</li>
 							</ul>
 						</div>

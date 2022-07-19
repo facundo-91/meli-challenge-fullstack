@@ -75,7 +75,7 @@ const ProductBuyInfo = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex">
+			<div className="flex lg:pb-[25px]">
 				<ul className="mt-5 mb-3 w-full px-4 [&>:not(:last-child)]:mb-4">
 					<li>
 						<div className="flex items-start text-black text-opacity-[.55]">
@@ -141,7 +141,7 @@ const ProductBuyInfo = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="mt-5 flex items-center justify-center border-b border-black border-opacity-10 pb-10">
+			<div className="mt-5 flex items-center justify-center border-b border-black border-opacity-10 pb-10 lg:hidden">
 				<div className="mr-[30px] flex h-5 items-center">
 					<svg className="h-[18px] w-5" height="20" viewBox="0 0 22 20" width="22">
 						<g fill="none" fillRule="evenodd" stroke="#3483FA" strokeWidth="1.5px">

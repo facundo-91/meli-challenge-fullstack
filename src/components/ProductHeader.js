@@ -3,15 +3,19 @@ import Image from "next/image";
 const ProductHeader = ({ condition, soldQuantity, title, pictures, price }) => {
 	return (
 		<>
-			<div className="w-full px-4 pt-4">
-				<div className="mb-2 text-xs">
-					<span className="whitespace-pre-wrap text-black text-opacity-[.55]">
+			<div className="w-full px-4 pt-4 lg:mt-10 lg:p-0">
+				<div className="mb-2">
+					<span className="whitespace-pre-wrap text-xs text-black text-opacity-[.55] lg:text-sm">
 						{`${condition === "new" ? "Nuevo" : "Usado"}  |  ${soldQuantity}	vendidos`}
 					</span>
 				</div>
-				<h1 className="pr-2.5 text-base text-black text-opacity-90">{title}</h1>
+				<div className="flex">
+					<h1 className="pr-2.5 text-base text-black text-opacity-90 lg:p-0 lg:text-[22px] lg:font-semibold ">
+						{title}
+					</h1>
+				</div>
 			</div>
-			<div className="relative mt-4">
+			<div className="relative mt-4 lg:hidden">
 				<div className="p-4">
 					<Image
 						alt=""
@@ -27,9 +31,9 @@ const ProductHeader = ({ condition, soldQuantity, title, pictures, price }) => {
 				</div>
 			</div>
 			<div className="flex">
-				<div className="mt-5 mb-1 w-full px-4 text-black text-opacity-90">
+				<div className="mt-5 mb-1 w-full px-4 text-black text-opacity-90 lg:p-0">
 					<div className="">
-						<span className="text-[32px] font-light">
+						<span className="text-[32px] font-light lg:text-4xl">
 							{new Intl.NumberFormat("es-AR", {
 								style: "currency",
 								currency: "ARS",

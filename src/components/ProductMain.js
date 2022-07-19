@@ -7,6 +7,7 @@ import ProductDescription from "./ProductDescription";
 import ProductPaymentMethods from "./ProductPaymentMethods";
 import ProductQuestions from "./ProductQuestions";
 import ProductGallery from "./ProductGallery";
+import LoadingSpinner from "./LoadingSpinner";
 
 const GET_PRODUCT = gql`
 	query GetProductByID($id: ID!) {
@@ -28,7 +29,7 @@ const ProductMain = ({ productId }) => {
 		variables: { id: productId },
 	});
 
-	if (loading) return <div>Loading</div>;
+	if (loading) return <LoadingSpinner />;
 	if (error) return <div>Error: {error.message}</div>;
 
 	const { product } = data;

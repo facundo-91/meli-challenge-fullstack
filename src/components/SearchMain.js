@@ -3,6 +3,7 @@ import SearchToolbar from "./SearchToolbar";
 import SearchResults from "./SearchResults";
 import SearchHeader from "./SearchHeader";
 import SearchSidebar from "./SearchSidebar";
+import LoadingSpinner from "./LoadingSpinner";
 
 const GET_PRODUCTS = gql`
 	query GetProducts($query: String!) {
@@ -22,7 +23,7 @@ const SearchMain = ({ searchQuery }) => {
 		variables: { query: searchQuery },
 	});
 
-	if (loading) return <div>Loading...</div>;
+	if (loading) return <LoadingSpinner />;
 	if (error) return <div>Error:{error.message}</div>;
 
 	const { products } = data;

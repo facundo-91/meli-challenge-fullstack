@@ -15,6 +15,7 @@ const ProductGallery = ({ pictures }) => {
 			<div className="relative mt-4 ml-4 h-auto w-full">
 				<div className="absolute top-0 left-[50px] mt-6 h-full min-h-[500px] w-[410px] p-4">
 					<Image
+						unoptimized
 						alt=""
 						height="500"
 						layout="responsive"
@@ -46,6 +47,7 @@ const ProductGallery = ({ pictures }) => {
 											}`}>
 											<div className={`h-12 w-12 p-0.5 ${pic === selectedPicUrl ? "-m-px" : ""}`}>
 												<Image
+													unoptimized
 													alt=""
 													height="44"
 													layout="responsive"

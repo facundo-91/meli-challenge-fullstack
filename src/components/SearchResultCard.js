@@ -10,7 +10,7 @@ const SearchResultCard = ({ id, title, price, image, freeShipping }) => {
 						<a>
 							<div className="relative h-36 w-36 lg:h-40 lg:w-40">
 								<div className="absolute z-10 h-full w-full rounded-md bg-black bg-opacity-[0.04] lg:hidden" />
-								<Image alt="" layout="fill" objectFit="contain" src={image} />
+								<Image unoptimized alt="" layout="fill" objectFit="contain" src={image} />
 							</div>
 						</a>
 					</Link>

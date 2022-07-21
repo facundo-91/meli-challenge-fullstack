@@ -18,6 +18,7 @@ const ProductHeader = ({ condition, soldQuantity, title, pictures, price }) => {
 			<div className="relative mt-4 lg:hidden">
 				<div className="p-4">
 					<Image
+						unoptimized
 						alt=""
 						height="500"
 						layout="responsive"

@@ -1,6 +1,8 @@
 import SearchResultCard from "./SearchResultCard";
 
 const SearchResults = ({ products }) => {
+	const { results } = products;
+
 	return (
 		<section className="flex w-full flex-col lg:w-[885px]">
 			<div className="mb-6 mt-2 hidden text-right text-[#333] lg:block">
@@ -19,7 +21,7 @@ const SearchResults = ({ products }) => {
 				</div>
 			</div>
 			<ol className="lg:[&>li:first-child>div]:rounded-t lg:[&>li:last-child>div]:rounded-b">
-				{products.map((product) => (
+				{results.map((product) => (
 					<SearchResultCard
 						key={product.id}
 						freeShipping={product.free_shipping}

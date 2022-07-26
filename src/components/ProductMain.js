@@ -19,7 +19,7 @@ const GET_PRODUCT = gql`
 			condition
 			pictures
 			location
-			short_description
+			description
 		}
 	}
 `;
@@ -52,7 +52,7 @@ const ProductMain = ({ productId }) => {
 							/>
 							<ProductBuyInfo />
 							<ProductSellerInfo location={product.location} />
-							<ProductDescription description={product.short_description} />
+							<ProductDescription description={product.description} />
 							<ProductPaymentMethods />
 							<ProductQuestions />
 						</div>
@@ -73,7 +73,7 @@ const ProductMain = ({ productId }) => {
 									</div>
 								</div>
 								<div className="flex flex-wrap after:m-10 after:block after:h-px after:w-full after:border-b after:border-black after:border-opacity-10 after:content-['']">
-									<ProductDescription description={product.short_description} />
+									<ProductDescription description={product.description} />
 								</div>
 								<ProductQuestions />
 							</div>

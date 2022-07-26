@@ -6,21 +6,24 @@ import SearchSidebar from "./SearchSidebar";
 import LoadingSpinner from "./LoadingSpinner";
 
 const GET_PRODUCTS = gql`
-	query GetProducts($query: String!) {
-		products(query: $query) {
-			id
-			title
-			image
-			price
-			location
-			free_shipping
+	query GetProducts($query: String!, $sortOrder: String!) {
+		products(query: $query, sortOrder: $sortOrder) {
+			results {
+				id
+				title
+				price
+				image
+				free_shipping
+			}
+			total_products
+			sort_order
 		}
 	}
 `;
 
 const SearchMain = ({ searchQuery }) => {
 	const { loading, error, data } = useQuery(GET_PRODUCTS, {
-		variables: { query: searchQuery },
+		variables: { query: searchQuery, sortOrder: "relevance" },
 	});
 
 	if (loading) return <LoadingSpinner />;

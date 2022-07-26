@@ -22,8 +22,9 @@ const GET_PRODUCTS = gql`
 `;
 
 const SearchMain = ({ searchQuery }) => {
-	const { loading, error, data } = useQuery(GET_PRODUCTS, {
+	const { loading, error, data, refetch } = useQuery(GET_PRODUCTS, {
 		variables: { query: searchQuery, sortOrder: "relevance" },
+		notifyOnNetworkStatusChange: true,
 	});
 
 	if (loading) return <LoadingSpinner />;
@@ -37,7 +38,7 @@ const SearchMain = ({ searchQuery }) => {
 			<SearchHeader searchQuery={searchQuery} />
 			<div className="flex w-full max-w-[1215px] pb-8 lg:mt-4 lg:pl-2.5 lg:pr-7">
 				<SearchSidebar searchQuery={searchQuery} />
-				<SearchResults products={products} />
+				<SearchResults products={products} sort={refetch} />
 			</div>
 		</main>
 	);

@@ -34,7 +34,7 @@ const SearchMain = ({ searchQuery }) => {
 
 	return (
 		<main className="w-full flex-col items-center bg-[#f5f5f5] antialiased lg:flex lg:bg-[#ededed]">
-			<SearchToolbar />
+			<SearchToolbar sort={refetch} sortedBy={products.sort_order} />
 			<SearchHeader searchQuery={searchQuery} />
 			<div className="flex w-full max-w-[1215px] pb-8 lg:mt-4 lg:pl-2.5 lg:pr-7">
 				<SearchSidebar searchQuery={searchQuery} />

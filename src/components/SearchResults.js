@@ -1,12 +1,12 @@
 import SearchResultCard from "./SearchResultCard";
-import SearchSortOrder from "./SearchSortOrder";
+import SearchSortingFilter from "./SearchSortingFilter";
 
 const SearchResults = ({ products, sort }) => {
 	const { sort_order, results } = products;
 
 	return (
 		<section className="flex w-full flex-col lg:w-[885px]">
-			<SearchSortOrder sort={sort} sortedBy={sort_order} />
+			<SearchSortingFilter sort={sort} sortedBy={sort_order} />
 			<ol className="lg:[&>li:first-child>div]:rounded-t lg:[&>li:last-child>div]:rounded-b">
 				{results.map((product) => (
 					<SearchResultCard

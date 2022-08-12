@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-const SearchSortOrder = ({ sort, sortedBy }) => {
+const SearchSortingFilter = ({ sort, sortedBy }) => {
 	const [openList, setOpenList] = useState(false);
 
 	const sortList = {
 		price_asc: "Menor precio",
 		price_desc: "Mayor precio",
-		relevance: "Mas relevantes",
+		relevance: "Más relevantes",
 	};
 
 	const handleSort = (sortBy) => {
@@ -97,4 +97,4 @@ const SearchSortOrder = ({ sort, sortedBy }) => {
 	);
 };
 
-export default SearchSortOrder;
+export default SearchSortingFilter;

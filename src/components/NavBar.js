@@ -8,14 +8,16 @@ import mercadoPuntos from "../../public/assets/mercado_puntos.webp";
 
 const NavBar = () => {
 	const [searchInput, setSearchInput] = useState("");
-	const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+	const [isDesktop, setIsDesktop] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const router = useRouter();
 
 	const submitSearch = (e) => {
-		if (searchInput.length > 0) {
-			e.preventDefault();
-			router.push(`/search/${searchInput}`);
+		e.preventDefault();
+		const trimedInput = searchInput.trim();
+
+		if (trimedInput.length > 0) {
+			router.push(`/search/${trimedInput}`);
 		}
 	};
 
@@ -28,10 +30,11 @@ const NavBar = () => {
 			setIsDesktop(window.innerWidth >= 1024);
 		};
 
+		checkViewport();
 		window.addEventListener("resize", checkViewport);
 
 		return () => window.removeEventListener("resize", checkViewport);
-	});
+	}, []);
 
 	const HamburgerMenu = () => {
 		return (
@@ -154,7 +157,14 @@ const NavBar = () => {
 							{isDesktop ? (
 								<Image alt="ML Logo" height="34" layout="fixed" src={logoLarge} width="134" />
 							) : (
-								<Image alt="ML Logo" height="32" layout="fixed" src={logoSmall} width="44" />
+								<Image
+									priority
+									alt="ML Logo"
+									height="32"
+									layout="fixed"
+									src={logoSmall}
+									width="44"
+								/>
 							)}
 						</a>
 					</Link>
@@ -182,7 +192,7 @@ const NavBar = () => {
 						</div>
 					</form>
 					<div className="mr-2.5 hidden max-h-10 max-w-[340px] lg:block">
-						<Image alt="ML Logo" height="78" src={mercadoPuntos} width="680" />
+						<Image priority alt="ML Logo" height="78" src={mercadoPuntos} width="680" />
 					</div>
 					<div
 						className="ml-1 flex h-12 w-[45px] cursor-pointer flex-col justify-center space-y-1.5 lg:hidden"

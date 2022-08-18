@@ -5,6 +5,8 @@ const Search = () => {
 	const router = useRouter();
 	const { searchQuery } = router.query;
 
+	if (!searchQuery) return null;
+
 	return <SearchMain searchQuery={searchQuery} />;
 };
 

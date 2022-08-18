@@ -5,6 +5,8 @@ const Product = () => {
 	const router = useRouter();
 	const { productID } = router.query;
 
+	if (!productID) return null;
+
 	return <ProductMain productId={productID} />;
 };
 

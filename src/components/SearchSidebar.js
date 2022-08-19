@@ -1,4 +1,4 @@
-const SearchSidebar = ({ searchQuery }) => {
+const SearchSidebar = ({ searchQuery, totalResults }) => {
 	return (
 		<aside className="hidden w-full max-w-[294px] pr-3.5 lg:block">
 			<div>
@@ -7,7 +7,9 @@ const SearchSidebar = ({ searchQuery }) => {
 				</h1>
 			</div>
 			<div className="mb-4 mt-1 flex items-center">
-				<span className="text-sm font-light leading-[1.29] text-[#333]">10 resultados</span>
+				<span className="text-sm font-light leading-[1.29] text-[#333]">
+					{totalResults} resultados
+				</span>
 			</div>
 			<section className="mt-9">
 				<div className="w-[242px]">

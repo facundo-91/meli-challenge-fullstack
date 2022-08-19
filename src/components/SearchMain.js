@@ -37,7 +37,7 @@ const SearchMain = ({ searchQuery }) => {
 			<SearchToolbar sort={refetch} sortedBy={products.sort_order} />
 			<SearchHeader searchQuery={searchQuery} />
 			<div className="flex w-full max-w-[1215px] pb-8 lg:mt-4 lg:pl-2.5 lg:pr-7">
-				<SearchSidebar searchQuery={searchQuery} />
+				<SearchSidebar searchQuery={searchQuery} totalResults={products.total_products} />
 				<SearchResults products={products} sort={refetch} />
 			</div>
 		</main>

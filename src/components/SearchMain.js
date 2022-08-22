@@ -5,7 +5,7 @@ import SearchHeader from "./SearchHeader";
 import SearchSidebar from "./SearchSidebar";
 import LoadingSpinner from "./LoadingSpinner";
 
-const GET_PRODUCTS = gql`
+export const GET_PRODUCTS = gql`
 	query GetProducts($query: String!, $sortOrder: String!) {
 		products(query: $query, sortOrder: $sortOrder) {
 			results {

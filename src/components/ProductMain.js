@@ -9,7 +9,7 @@ import ProductQuestions from "./ProductQuestions";
 import ProductGallery from "./ProductGallery";
 import LoadingSpinner from "./LoadingSpinner";
 
-const GET_PRODUCT = gql`
+export const GET_PRODUCT = gql`
 	query GetProductByID($id: ID!) {
 		product(id: $id) {
 			id
@@ -24,9 +24,9 @@ const GET_PRODUCT = gql`
 	}
 `;
 
-const ProductMain = ({ productId }) => {
+const ProductMain = ({ productID }) => {
 	const { data, loading, error } = useQuery(GET_PRODUCT, {
-		variables: { id: productId },
+		variables: { id: productID },
 	});
 
 	if (loading) return <LoadingSpinner />;

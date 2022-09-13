@@ -15,6 +15,10 @@ module.exports = {
 			colors: {
 				"meli-yellow": "#FFF159",
 				"meli-blue": "#3483FA",
+				"dark-primary": "#1a1a1a",
+				"dark-secundary": "#222222",
+				"dark-links": "#e6bb5d",
+				"dark-text": "#adbac7",
 			},
 			fontFamily: {
 				navigation: "Navigation",

@@ -2,28 +2,30 @@ const SearchSidebar = ({ searchQuery, totalResults }) => {
 	return (
 		<aside className="hidden w-full max-w-[294px] pr-3.5 lg:block">
 			<div>
-				<h1 className="text-[26px] font-semibold capitalize leading-[30px] text-[#333]">
+				<h1 className="text-[26px] font-semibold capitalize leading-[30px] text-[#333] dark:text-dark-text">
 					{searchQuery}
 				</h1>
 			</div>
 			<div className="mb-4 mt-1 flex items-center">
-				<span className="text-sm font-light leading-[1.29] text-[#333]">
+				<span className="text-sm font-light leading-[1.29] text-[#333] dark:text-dark-text">
 					{totalResults} resultados
 				</span>
 			</div>
 			<section className="mt-9">
 				<div className="w-[242px]">
-					<div className="my-1 flex w-full items-center justify-between rounded-md border border-[#ddd] bg-white p-4">
-						<span className="text-sm font-semibold text-black text-opacity-80">Llegan mañana</span>
+					<div className="my-1 flex w-full items-center justify-between rounded-md border border-[#ddd] bg-white p-4 dark:border-opacity-10 dark:bg-dark-secundary">
+						<span className="text-sm font-semibold text-black text-opacity-80 dark:text-dark-text">
+							Llegan mañana
+						</span>
 						<div className="ml-1.5 inline-block h-4 w-8">
-							<span className="relative inline-block h-[18px] w-[34px] rounded-[25px] bg-[#d8d8d8] after:absolute after:left-0 after:my-px after:mx-0.5 after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:shadow-sm after:shadow-black/[55%] after:content-['']" />
+							<span className="relative inline-block h-[18px] w-[34px] rounded-[25px] bg-[#d8d8d8] after:absolute after:left-0 after:my-px after:mx-0.5 after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:shadow-sm after:shadow-black/[55%] after:content-[''] dark:bg-opacity-25" />
 						</div>
 					</div>
 				</div>
 				<div className="w-[242px]">
-					<div className="my-1 flex items-center justify-between rounded-md border border-[#ddd] bg-white p-4">
+					<div className="my-1 flex items-center justify-between rounded-md border border-[#ddd] bg-white p-4 dark:border-opacity-10 dark:bg-dark-secundary">
 						<div className="flex flex-col">
-							<div className="inline-block text-sm font-semibold leading-[15px] text-black text-opacity-80">
+							<div className="inline-block text-sm font-semibold leading-[15px] text-black text-opacity-80 dark:text-dark-text">
 								<svg
 									className="mr-1.5 inline h-[15px] w-[45px] fill-[#00a650]"
 									height="13"
@@ -36,20 +38,22 @@ const SearchSidebar = ({ searchQuery, totalResults }) => {
 								</svg>
 								te ahorra envíos
 							</div>
-							<span className="mt-[5px] inline-block text-xs leading-[15px] text-black text-opacity-80">
+							<span className="mt-[5px] inline-block text-xs leading-[15px] text-black text-opacity-80 dark:text-dark-text">
 								Con tu carrito de compras
 							</span>
 						</div>
 						<div className="ml-1.5 inline-block h-4 w-8">
-							<span className="relative inline-block h-[18px] w-[34px] rounded-[25px] bg-[#d8d8d8] after:absolute after:left-0 after:my-px after:mx-0.5 after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:shadow-sm after:shadow-black/[55%] after:content-['']" />
+							<span className="relative inline-block h-[18px] w-[34px] rounded-[25px] bg-[#d8d8d8] after:absolute after:left-0 after:my-px after:mx-0.5 after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:shadow-sm after:shadow-black/[55%] after:content-[''] dark:bg-opacity-25" />
 						</div>
 					</div>
 				</div>
 				<div className="w-[242px]">
-					<div className="my-1 flex items-center justify-between rounded-md border border-[#ddd] bg-white p-4">
-						<span className="text-sm font-semibold text-black text-opacity-80">Envío gratis</span>
+					<div className="my-1 flex items-center justify-between rounded-md border border-[#ddd] bg-white p-4 dark:border-opacity-10 dark:bg-dark-secundary">
+						<span className="text-sm font-semibold text-black text-opacity-80 dark:text-dark-text">
+							Envío gratis
+						</span>
 						<div className="ml-1.5 inline-block h-4 w-8">
-							<span className="relative inline-block h-[18px] w-[34px] rounded-[25px] bg-[#d8d8d8] after:absolute after:left-0 after:my-px after:mx-0.5 after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:shadow-sm after:shadow-black/[55%] after:content-['']" />
+							<span className="relative inline-block h-[18px] w-[34px] rounded-[25px] bg-[#d8d8d8] after:absolute after:left-0 after:my-px after:mx-0.5 after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:shadow-sm after:shadow-black/[55%] after:content-[''] dark:bg-opacity-25" />
 						</div>
 					</div>
 				</div>

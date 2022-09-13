@@ -1,10 +1,14 @@
 const ProductPaymentMethods = () => {
 	return (
 		<div className="flex flex-wrap">
-			<div className="flex w-full flex-wrap border-b border-black border-opacity-10 py-10 px-4 lg:border-none lg:pt-8 lg:pb-6">
-				<h3 className="mb-6 w-full text-xl lg:text-lg">Medios de pago</h3>
+			<div className="flex w-full flex-wrap border-b border-[#ddd] py-10 px-4 dark:border-opacity-10 lg:border-none lg:pt-8 lg:pb-6">
+				<h3 className="mb-6 w-full text-xl text-black text-opacity-90 dark:text-dark-text lg:text-lg">
+					Medios de pago
+				</h3>
 				<div className="w-full">
-					<p className="leading-3">Hasta 12 cuotas sin tarjeta</p>
+					<p className="leading-3 text-black text-opacity-90 dark:text-dark-text">
+						Hasta 12 cuotas sin tarjeta
+					</p>
 					<div className="mt-3 flex flex-wrap items-center">
 						<div>
 							<div className="mt-2.5 mr-6 mb-1 ml-0">
@@ -45,8 +49,10 @@ const ProductPaymentMethods = () => {
 							</div>
 						</div>
 					</div>
-					<p className="mt-6 leading-3">Tarjetas de crédito</p>
-					<p className="mt-2 leading-[18px] text-black text-opacity-[.55]">
+					<p className="mt-6 leading-3 text-black text-opacity-90 dark:text-dark-text">
+						Tarjetas de crédito
+					</p>
+					<p className="mt-2 leading-[18px] text-black text-opacity-[.55] dark:text-dark-text dark:text-opacity-70">
 						¡Cuotas sin interés con bancos seleccionados!
 					</p>
 					<div className="mt-3 flex flex-wrap items-center">
@@ -135,44 +141,16 @@ const ProductPaymentMethods = () => {
 							</div>
 						</div>
 					</div>
-					<p className="mt-6 leading-3">Tarjetas de débito</p>
+					<p className="mt-6 leading-3 text-black text-opacity-90 dark:text-dark-text">
+						Tarjetas de débito
+					</p>
 					<div className="mt-3 flex flex-wrap items-center">
 						<div>
 							<div className="mt-2.5 mr-6 mb-1 ml-0">
 								<svg height="32" viewBox="0 0 89.33 40" width="71">
-									<linearGradient
-										gradientTransform="translate(-.662 16.542)"
-										gradientUnits="userSpaceOnUse"
-										id="a"
-										x1="8.687"
-										x2="36.048"
-										y1="3.271"
-										y2="3.271">
-										<stop offset="0" stopColor="#22274d" />
-										<stop offset="1" stopColor="#204991" />
-									</linearGradient>
 									<path
-										clipRule="evenodd"
 										d="M20.576 11.251l-7.193 17.365-4.625-.026-3.416-13.908c-.205-.857-.389-1.173-1.031-1.534C3.26 12.553 1.527 11.99 0 11.639l.107-.501 7.445.042c.953.005 1.805.659 2.014 1.785l1.785 10.081 4.623-11.819 4.602.024zm18.065 11.821c.045-4.593-6.15-4.88-6.096-6.934.02-.621.6-1.284 1.867-1.449.627-.079 2.357-.135 4.312.806l.785-3.689c-1.051-.397-2.4-.785-4.09-.794-4.328-.024-7.385 2.323-7.432 5.714-.039 2.511 2.156 3.917 3.811 4.759 1.699.863 2.268 1.411 2.258 2.178-.02 1.165-1.369 1.673-2.629 1.686-2.205.021-3.475-.627-4.49-1.125l-.812 3.813c1.016.486 2.902.918 4.861.952 4.598.025 7.619-2.293 7.655-5.917zm11.396 5.747l4.049.022-3.439-17.423-3.734-.021c-.844-.004-1.553.49-1.871 1.263l-6.658 16.094 4.594.025.932-2.596 5.613.031.514 2.605zm-4.849-6.193l2.338-6.526 1.289 6.546-3.627-.02zM26.83 11.286L23.113 28.67l-4.377-.024 3.717-17.384 4.377.024z"
-										fill="url(#a)"
-										fillRule="evenodd"
-									/>
-									<linearGradient
-										gradientTransform="translate(-.662 16.542)"
-										gradientUnits="userSpaceOnUse"
-										id="b"
-										x1="8.687"
-										x2="36.048"
-										y1="3.271"
-										y2="3.271">
-										<stop offset="0" stopColor="#22274d" />
-										<stop offset="1" stopColor="#204991" />
-									</linearGradient>
-									<path
-										clipRule="evenodd"
-										d="M20.576 11.251l-7.193 17.365-4.625-.026-3.416-13.908c-.205-.857-.389-1.173-1.031-1.534C3.26 12.553 1.527 11.99 0 11.639l.107-.501 7.445.042c.953.005 1.805.659 2.014 1.785l1.785 10.081 4.623-11.819 4.602.024zm18.065 11.821c.045-4.593-6.15-4.88-6.096-6.934.02-.621.6-1.284 1.867-1.449.627-.079 2.357-.135 4.312.806l.785-3.689c-1.051-.397-2.4-.785-4.09-.794-4.328-.024-7.385 2.323-7.432 5.714-.039 2.511 2.156 3.917 3.811 4.759 1.699.863 2.268 1.411 2.258 2.178-.02 1.165-1.369 1.673-2.629 1.686-2.205.021-3.475-.627-4.49-1.125l-.812 3.813c1.016.486 2.902.918 4.861.952 4.598.025 7.619-2.293 7.655-5.917zm11.396 5.747l4.049.022-3.439-17.423-3.734-.021c-.844-.004-1.553.49-1.871 1.263l-6.658 16.094 4.594.025.932-2.596 5.613.031.514 2.605zm-4.849-6.193l2.338-6.526 1.289 6.546-3.627-.02zM26.83 11.286L23.113 28.67l-4.377-.024 3.717-17.384 4.377.024z"
-										fill="url(#b)"
-										fillRule="evenodd"
+										fill="#1434CB"
 									/>
 									<path
 										d="M60.654 22.689l.031-5.727 1.973.011c.445.002.785.032 1.02.088.328.078.607.216.838.415.299.258.523.585.672.982.146.397.219.853.217 1.363-.002.436-.055.82-.158 1.155s-.236.612-.396.832c-.16.22-.334.391-.523.517s-.418.221-.686.284-.574.094-.92.092l-2.068-.012zm.762-.671l1.223.007c.377.002.674-.031.889-.101.215-.069.387-.167.516-.294.18-.179.322-.42.424-.722s.154-.671.156-1.103c.004-.6-.092-1.059-.287-1.383-.195-.323-.434-.539-.713-.65-.203-.079-.529-.12-.98-.123l-1.203-.006-.025 4.375zm5.031.704l.031-5.727 4.141.023-.004.676-3.383-.019-.01 1.754 3.168.018-.004.672-3.168-.018-.01 1.949 3.516.02-.004.676-4.273-.024zm1.596-6.07l.525-1.091.922.005-.865 1.089-.582-.003zm3.693 6.099l.031-5.727 2.148.012c.438.002.787.063 1.051.18.266.117.471.297.619.539s.221.494.221.757c-.002.244-.07.474-.203.69a1.423 1.423 0 0 1-.605.52c.348.104.611.279.797.524.186.245.275.535.273.869 0 .268-.059.517-.174.747-.113.229-.254.407-.422.531s-.377.217-.629.28-.561.092-.924.09l-2.183-.012zm.776-3.316l1.238.007c.336.002.578-.018.723-.062a.805.805 0 0 0 .438-.283.815.815 0 0 0 .15-.499c0-.189-.045-.357-.135-.502s-.221-.246-.389-.299c-.17-.054-.459-.083-.871-.085l-1.145-.006-.009 1.729zm-.014 2.644l1.426.008c.244.001.416-.007.516-.024.174-.03.32-.082.438-.154a.823.823 0 0 0 .291-.317.986.986 0 0 0 .115-.481c.002-.213-.051-.399-.16-.558s-.26-.269-.453-.334-.473-.099-.838-.101l-1.324-.007-.011 1.968zm4.734.702l.031-5.727.758.004-.031 5.727-.758-.004zm3.551.02l.027-5.051-1.887-.01.004-.676 4.539.025-.004.676-1.895-.01-.027 5.051-.757-.005zm3.069-2.772c.006-.951.266-1.694.779-2.228s1.174-.8 1.98-.796a2.755 2.755 0 0 1 1.428.387c.424.254.744.61.965 1.062.221.453.328.967.326 1.539-.004.58-.123 1.099-.361 1.557a2.39 2.39 0 0 1-1.002 1.036c-.43.234-.895.349-1.393.346a2.723 2.723 0 0 1-1.443-.398 2.52 2.52 0 0 1-.959-1.072 3.275 3.275 0 0 1-.32-1.433zm.781.016c-.002.689.18 1.235.549 1.634s.834.601 1.393.604c.57.003 1.041-.195 1.412-.594.369-.398.559-.968.562-1.704.002-.467-.074-.874-.23-1.222a1.795 1.795 0 0 0-.688-.812 1.873 1.873 0 0 0-1.02-.293 1.936 1.936 0 0 0-1.387.545c-.388.366-.585.981-.591 1.842z"
@@ -240,7 +218,7 @@ const ProductPaymentMethods = () => {
 							</div>
 						</div>
 					</div>
-					<p className="mt-6 leading-3">Efectivo</p>
+					<p className="mt-6 leading-3 text-black text-opacity-90 dark:text-dark-text">Efectivo</p>
 					<div className="mt-3 flex flex-wrap items-center">
 						<div>
 							<div className="mt-2.5 mr-6 mb-1 ml-0">
@@ -297,7 +275,7 @@ const ProductPaymentMethods = () => {
 						</div>
 					</div>
 				</div>
-				<div className="relative mt-8 inline-block h-[50px] w-full rounded-md border border-black border-opacity-10 py-4 pl-4 pr-[38px] text-sm leading-none text-meli-blue">
+				<div className="relative mt-8 inline-block h-[50px] w-full rounded-md border border-[#ddd] py-4 pl-4 pr-[38px] text-sm leading-none text-meli-blue dark:border-opacity-10">
 					<span>Conocé otros medios de pago</span>
 					<div>
 						<svg

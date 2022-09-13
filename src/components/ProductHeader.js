@@ -5,18 +5,18 @@ const ProductHeader = ({ condition, soldQuantity, title, pictures, price }) => {
 		<>
 			<div className="w-full px-4 pt-4 lg:mt-10 lg:p-0">
 				<div className="mb-2">
-					<span className="whitespace-pre-wrap text-xs text-black text-opacity-[.55] lg:text-sm">
+					<span className="whitespace-pre-wrap text-xs text-black text-opacity-[.55] dark:text-dark-text dark:text-opacity-70 lg:text-sm">
 						{`${condition === "new" ? "Nuevo" : "Usado"}  |  ${soldQuantity}	vendidos`}
 					</span>
 				</div>
 				<div className="flex">
-					<h1 className="pr-2.5 text-base text-black text-opacity-90 lg:p-0 lg:text-[22px] lg:font-semibold ">
+					<h1 className="pr-2.5 text-base text-black text-opacity-90 dark:text-dark-text lg:p-0 lg:text-[22px] lg:font-semibold ">
 						{title}
 					</h1>
 				</div>
 			</div>
 			<div className="relative mt-4 lg:hidden">
-				<div className="p-4">
+				<div className="mx-4 rounded p-4 dark:bg-white">
 					<Image
 						unoptimized
 						alt=""
@@ -27,12 +27,12 @@ const ProductHeader = ({ condition, soldQuantity, title, pictures, price }) => {
 						width="500"
 					/>
 				</div>
-				<div className="absolute top-0 left-[15px] h-[26px] w-[46px] rounded-xl bg-[#f5f5f5] py-[5px] text-center text-xs font-semibold text-black text-opacity-90">
+				<div className="absolute top-0 left-[15px] h-[26px] w-[46px] rounded-xl bg-[#f5f5f5] py-[5px] text-center text-xs font-semibold text-black text-opacity-90 dark:left-5 dark:top-1.5">
 					<span>1</span>/<span>{pictures.length}</span>
 				</div>
 			</div>
 			<div className="flex">
-				<div className="mt-5 mb-1 w-full px-4 text-black text-opacity-90 lg:p-0">
+				<div className="mt-5 mb-1 w-full px-4 text-black text-opacity-90 dark:text-dark-text lg:p-0">
 					<div className="">
 						<span className="text-[32px] font-light lg:text-4xl">
 							{new Intl.NumberFormat("es-AR", {

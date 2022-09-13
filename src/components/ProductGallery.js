@@ -17,6 +17,7 @@ const ProductGallery = ({ pictures }) => {
 					<Image
 						unoptimized
 						alt=""
+						className="dark:rounded dark:bg-white"
 						height="500"
 						layout="responsive"
 						objectFit="contain"
@@ -40,7 +41,7 @@ const ProductGallery = ({ pictures }) => {
 								<span className="mb-2 block ">
 									<label htmlFor={pic.slice(27, -4)}>
 										<div
-											className={`inline-flex cursor-pointer rounded ${
+											className={`inline-flex cursor-pointer rounded dark:bg-white ${
 												pic === selectedPicUrl
 													? "border-2 border-meli-blue border-opacity-100"
 													: "border border-black border-opacity-25"

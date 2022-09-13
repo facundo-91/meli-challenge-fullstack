@@ -15,10 +15,10 @@ const SearchToolbar = ({ sort, sortedBy }) => {
 
 	return (
 		<>
-			<div className="border-y border-black border-opacity-[0.07] bg-white lg:hidden">
+			<div className="border-b border-black border-opacity-10 bg-white dark:border-[#ddd] dark:border-opacity-10 dark:bg-dark-secundary lg:hidden">
 				<ul className="flex w-full content-center justify-around [&>li]:relative [&>li>div]:flex [&>li>div]:items-center [&>li>div]:justify-center [&>li>div]:text-sm">
 					<li
-						className="flex-auto cursor-pointer after:absolute after:bottom-4 after:right-0 after:h-5 after:border-r after:border-[#ddd] after:content-['']"
+						className="flex-auto cursor-pointer after:absolute after:bottom-4 after:right-0 after:h-5 after:border-r after:border-[#ddd] after:content-[''] dark:after:border-opacity-10"
 						onClick={() => toggleSortingModal()}>
 						<div className="h-[52px] text-meli-blue">
 							<div className="mr-2 h-3.5 w-3.5">
@@ -29,11 +29,11 @@ const SearchToolbar = ({ sort, sortedBy }) => {
 							Ordenar
 						</div>
 					</li>
-					<li className="flex min-w-[160px] items-center justify-center px-3.5 after:absolute after:bottom-4 after:right-0 after:h-5 after:border-r after:border-[#ddd] after:content-['']">
-						<div className="text-[#333]">
+					<li className="flex min-w-[160px] items-center justify-center px-3.5 after:absolute after:bottom-4 after:right-0 after:h-5 after:border-r after:border-[#ddd] after:content-[''] dark:after:border-opacity-10">
+						<div className="text-[#333] dark:text-dark-text">
 							Llegan mañana
 							<div className="ml-1.5 inline-block h-4 w-8">
-								<span className="relative inline-block h-4 w-8 rounded-[25px] bg-[#d8d8d8] after:absolute after:left-0 after:m-0.5 after:block after:h-3 after:w-3 after:rounded-full after:bg-white after:content-['']" />
+								<span className="relative inline-block h-4 w-8 rounded-[25px] bg-[#d8d8d8] after:absolute after:left-0 after:m-0.5 after:block after:h-3 after:w-3 after:rounded-full after:bg-white after:content-[''] dark:bg-opacity-25" />
 							</div>
 						</div>
 					</li>

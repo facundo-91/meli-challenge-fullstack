@@ -4,12 +4,12 @@ import Link from "next/link";
 const SearchResultCard = ({ id, title, price, image, freeShipping }) => {
 	return (
 		<li>
-			<div className="my-px flex bg-white py-3 lg:py-5 lg:pr-[50px]">
+			<div className="my-px flex bg-white py-3 dark:bg-dark-secundary lg:py-5 lg:pr-[50px]">
 				<div className="mx-3">
 					<Link href={`/product/${id}`}>
 						<a>
 							<div className="relative h-36 w-36 lg:h-40 lg:w-40">
-								<div className="absolute z-10 h-full w-full rounded-md bg-black bg-opacity-[0.04] lg:hidden" />
+								<div className="absolute z-10 h-full w-full rounded-md bg-black bg-opacity-[0.04] dark:z-0 dark:bg-white lg:z-0 lg:bg-white" />
 								<Image unoptimized alt="" layout="fill" objectFit="contain" src={image} />
 							</div>
 						</a>
@@ -19,11 +19,11 @@ const SearchResultCard = ({ id, title, price, image, freeShipping }) => {
 					<Link href={`/product/${id}`}>
 						<a>
 							<div className="mb-1">
-								<h2 className="text-sm font-medium leading-[1.3] text-[#333] lg:text-xl lg:font-light lg:leading-[1.3]">
+								<h2 className="text-sm font-medium leading-[1.3] text-[#333] dark:text-dark-text lg:text-xl lg:font-light lg:leading-[1.3]">
 									{title}
 								</h2>
 							</div>
-							<div className="mb-2 flex text-xl leading-tight text-[#333] lg:text-2xl">
+							<div className="mb-2 flex text-xl leading-tight text-[#333] dark:text-dark-text lg:text-2xl">
 								<p>
 									{new Intl.NumberFormat("es-AR", {
 										style: "currency",

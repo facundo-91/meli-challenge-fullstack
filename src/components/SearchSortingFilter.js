@@ -14,7 +14,7 @@ const SearchSortingFilter = ({ sort, sortedBy }) => {
 	};
 
 	return (
-		<div className="mb-6 mt-2 hidden text-right text-[#333] lg:block">
+		<div className="mb-6 mt-2 hidden text-right text-[#333] dark:text-dark-text lg:block">
 			<div className="inline-flex items-center">
 				<div className="mr-1.5 text-sm font-semibold leading-[1.7]">Ordenar por</div>
 				<div className="relative flex text-sm">
@@ -36,52 +36,58 @@ const SearchSortingFilter = ({ sort, sortedBy }) => {
 						className={`absolute -translate-x-[9px] translate-y-[27px] ${
 							openList ? "block" : "hidden"
 						}`}>
-						<div className="w-auto min-w-[124px] rounded-md bg-white">
+						<div className="w-auto min-w-[124px] rounded-md bg-white dark:bg-dark-secundary">
 							<div className="min-w-[135px] overflow-hidden">
 								<ul className="overflow-y-auto rounded-md text-sm font-light leading-none shadow-[0_1px_2px_0_rgb(0,0,0,12%)]">
 									<li
-										className={`relative rounded-t-md border-b border-b-[#d8d8d8] py-[13px] pl-4 after:absolute after:top-0 after:left-0 after:h-full after:content-[''] hover:after:w-[5px] ${
+										className={`relative rounded-t-md border-b border-[#ddd] py-[13px] pl-4 after:absolute after:top-0 after:left-0 after:h-full after:content-[''] hover:after:w-[5px] dark:border-opacity-10 ${
 											sortedBy === "relevance"
-												? "bg-black bg-opacity-[.04] font-semibold before:absolute before:top-0 before:bottom-0.5 before:left-0 before:h-full before:rounded-[1.5px] before:border-l-[5px] before:border-meli-blue before:content-[''] after:bg-meli-blue"
-												: "cursor-pointer after:bg-[#9cc4db] hover:bg-black hover:bg-opacity-[.04]"
+												? "bg-black bg-opacity-[.04] font-semibold before:absolute before:top-0 before:bottom-0.5 before:left-0 before:h-full before:rounded-[1.5px] before:border-l-[5px] before:border-meli-blue before:content-[''] after:bg-meli-blue dark:bg-dark-text dark:bg-opacity-10"
+												: "cursor-pointer after:bg-[#9cc4db] hover:bg-black hover:bg-opacity-[.04] dark:hover:bg-dark-text dark:hover:bg-opacity-10"
 										}`}
 										onClick={() => handleSort("relevance")}>
 										<div className="flex items-center ">
 											<div
 												className={`${
-													sortedBy === "relevance" ? "text-meli-blue" : "text-[#333]"
+													sortedBy === "relevance"
+														? "text-meli-blue"
+														: "text-[#333] dark:text-dark-text"
 												}`}>
 												<span className="block">Más relevantes</span>
 											</div>
 										</div>
 									</li>
 									<li
-										className={`relative border-b border-b-[#d8d8d8] py-[13px] pl-4 after:absolute after:top-0 after:left-0 after:h-full after:content-[''] hover:after:w-[5px] ${
+										className={`relative border-b border-[#ddd] py-[13px] pl-4 after:absolute after:top-0 after:left-0 after:h-full after:content-[''] hover:after:w-[5px] dark:border-opacity-10 ${
 											sortedBy === "price_asc"
-												? "bg-black bg-opacity-[.04] font-semibold before:absolute before:top-0 before:bottom-0.5 before:left-0 before:h-full before:rounded-[1.5px] before:border-l-[5px] before:border-meli-blue before:content-[''] after:bg-meli-blue"
-												: "cursor-pointer after:bg-[#9cc4db] hover:bg-black hover:bg-opacity-[.04]"
+												? "bg-black bg-opacity-[.04] font-semibold before:absolute before:top-0 before:bottom-0.5 before:left-0 before:h-full before:rounded-[1.5px] before:border-l-[5px] before:border-meli-blue before:content-[''] after:bg-meli-blue dark:bg-dark-text dark:bg-opacity-10"
+												: "cursor-pointer after:bg-[#9cc4db] hover:bg-black hover:bg-opacity-[.04] dark:hover:bg-dark-text dark:hover:bg-opacity-10"
 										}`}
 										onClick={() => handleSort("price_asc")}>
 										<div className="flex items-center ">
 											<div
 												className={`${
-													sortedBy === "price_asc" ? "text-meli-blue" : "text-[#333]"
+													sortedBy === "price_asc"
+														? "text-meli-blue"
+														: "text-[#333] dark:text-dark-text"
 												}`}>
 												<span className="block">Menor precio</span>
 											</div>
 										</div>
 									</li>
 									<li
-										className={`relative rounded-b-md border-b border-b-[#d8d8d8] py-[13px] pl-4 after:absolute after:top-0 after:left-0 after:h-full after:content-[''] hover:after:w-[5px] ${
+										className={`relative rounded-b-md border-b border-[#ddd] py-[13px] pl-4 after:absolute after:top-0 after:left-0 after:h-full after:content-[''] hover:after:w-[5px] dark:border-opacity-10 ${
 											sortedBy === "price_desc"
-												? "bg-black bg-opacity-[.04] font-semibold before:absolute before:top-0 before:bottom-0.5 before:left-0 before:h-full before:rounded-[1.5px] before:border-l-[5px] before:border-meli-blue before:content-[''] after:bg-meli-blue"
-												: "cursor-pointer after:bg-[#9cc4db] hover:bg-black hover:bg-opacity-[.04]"
+												? "bg-black bg-opacity-[.04] font-semibold before:absolute before:top-0 before:bottom-0.5 before:left-0 before:h-full before:rounded-[1.5px] before:border-l-[5px] before:border-meli-blue before:content-[''] after:bg-meli-blue dark:bg-dark-text dark:bg-opacity-10"
+												: "cursor-pointer after:bg-[#9cc4db] hover:bg-black hover:bg-opacity-[.04] dark:hover:bg-dark-text dark:hover:bg-opacity-10"
 										}`}
 										onClick={() => handleSort("price_desc")}>
 										<div className="flex items-center ">
 											<div
 												className={`${
-													sortedBy === "price_desc" ? "text-meli-blue" : "text-[#333]"
+													sortedBy === "price_desc"
+														? "text-meli-blue"
+														: "text-[#333] dark:text-dark-text"
 												}`}>
 												<span className="block">Mayor precio</span>
 											</div>

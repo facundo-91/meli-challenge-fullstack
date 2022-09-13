@@ -33,7 +33,7 @@ const SearchMain = ({ searchQuery }) => {
 	const { products } = data;
 
 	return (
-		<main className="w-full flex-col items-center bg-[#f5f5f5] antialiased lg:flex lg:bg-[#ededed]">
+		<main className="w-full flex-col items-center bg-[#f5f5f5] antialiased dark:bg-dark-primary lg:flex lg:bg-[#ededed] lg:dark:bg-dark-primary">
 			<SearchToolbar sort={refetch} sortedBy={products.sort_order} />
 			<SearchHeader searchQuery={searchQuery} />
 			<div className="flex w-full max-w-[1215px] pb-8 lg:mt-4 lg:pl-2.5 lg:pr-7">

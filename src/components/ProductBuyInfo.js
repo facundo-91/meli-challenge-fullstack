@@ -3,10 +3,14 @@ const ProductBuyInfo = () => {
 		<>
 			<div className="flex">
 				<div className="mt-6 w-full px-4">
-					<div className="mb-5 flex text-black text-opacity-90">
+					<div className="mb-5 flex">
 						<figure className="mr-2.5">
-							<svg height="15" viewBox="0 0 18 15" width="18">
-								<g fill="#000000" fillOpacity="0.9">
+							<svg
+								className="fill-current text-black text-opacity-90 dark:text-dark-text "
+								height="15"
+								viewBox="0 0 18 15"
+								width="18">
+								<g>
 									<path
 										d="M7.763 12.207a2.398 2.398 0 0 1-4.726 0H1.8a1.8 1.8 0 0 1-1.8-1.8V2.195a1.8 1.8 0 0 1 1.8-1.8h8.445a1.8 1.8 0 0 1 1.8 1.8v.568l3.322.035L18 6.821v5.386h-2.394a2.398 2.398 0 0 1-4.727 0H7.763zm-.1-1.2h3.182V2.195a.6.6 0 0 0-.6-.6H1.8a.6.6 0 0 0-.6.6v8.212a.6.6 0 0 0 .6.6h1.337a2.399 2.399 0 0 1 4.526 0zm7.843 0H16.8V7.179l-2.086-3.187-2.669-.029v5.76a2.399 2.399 0 0 1 3.461 1.284zm-2.263 1.99a1.198 1.198 0 1 0 0-2.395 1.198 1.198 0 0 0 0 2.396zm-7.843 0a1.198 1.198 0 1 0 0-2.395 1.198 1.198 0 0 0 0 2.396z"
 										fillRule="nonzero"
@@ -15,8 +19,10 @@ const ProductBuyInfo = () => {
 							</svg>
 						</figure>
 						<div className="w-full">
-							<p className="mb-0.5 text-base leading-[1.3]">Envíos a todo el país</p>
-							<p className="mb-0.5 text-base leading-[1.3] text-black text-opacity-[.55]">
+							<p className="mb-0.5 text-base leading-[1.3] text-black text-opacity-90 dark:text-dark-text">
+								Envíos a todo el país
+							</p>
+							<p className="mb-0.5 text-base leading-[1.3] text-black text-opacity-[.55] dark:text-dark-text dark:text-opacity-70">
 								Conocé los tiempos y las formas de envío.
 							</p>
 							<div className="inline-block text-sm">
@@ -41,10 +47,12 @@ const ProductBuyInfo = () => {
 						</div>
 					</div>
 					<div className="my-6">
-						<p className="text-base font-semibold text-black text-opacity-90">Stock disponible</p>
+						<p className="text-base font-semibold text-black text-opacity-90 dark:text-dark-text">
+							Stock disponible
+						</p>
 					</div>
 					<div className="mb-[25px]">
-						<span className="relative inline-flex h-[50px] w-full rounded-md bg-[#f5f5f5] py-4 pl-4 pr-[38px] text-base leading-none text-black text-opacity-90">
+						<span className="relative inline-flex h-[50px] w-full rounded-md bg-[#f5f5f5] py-4 pl-4 pr-[38px] text-base leading-none text-black text-opacity-90 dark:bg-dark-secundary dark:text-dark-text dark:lg:bg-dark-primary">
 							<span>Cantidad:</span>
 							<div>
 								<span className="ml-1.5 font-semibold">1</span>
@@ -78,17 +86,21 @@ const ProductBuyInfo = () => {
 			<div className="flex lg:pb-[25px]">
 				<ul className="mt-5 mb-3 w-full px-4 [&>:not(:last-child)]:mb-4">
 					<li>
-						<div className="flex items-start text-black text-opacity-[.55]">
+						<div className="flex items-start">
 							<figure className="mt-px mr-2.5">
-								<svg className="h-4 w-4" height="12" viewBox="0 0 14 12" width="14">
-									<g fill="#000000" fillOpacity="0.55">
+								<svg
+									className="h-4 w-4 fill-current text-black text-opacity-[.55] dark:text-dark-text"
+									height="12"
+									viewBox="0 0 14 12"
+									width="14">
+									<g>
 										<path d="M2.474 7.2h7.225a2.7 2.7 0 1 0 0-5.4H7V.6h2.7a3.9 3.9 0 1 1 0 7.8H2.473l2.45 2.389-.839.859L.14 7.8l3.945-3.848.838.859L2.473 7.2z" />
 									</g>
 								</svg>
 							</figure>
 							<div className="w-full">
 								<div className="mb-0.5">
-									<p className="text-sm leading-[1.3]">
+									<p className="text-sm leading-[1.3] text-black text-opacity-[.55] dark:text-dark-text">
 										<span className="block text-meli-blue">Devolución gratis.</span> Tenés 30 días
 										desde que lo recibís.
 									</p>
@@ -97,10 +109,14 @@ const ProductBuyInfo = () => {
 						</div>
 					</li>
 					<li>
-						<div className="flex items-start text-black text-opacity-[.55]">
+						<div className="flex items-start">
 							<figure className="mt-px mr-2.5">
-								<svg className="h-4 w-4" height="15" viewBox="0 0 14 15" width="14">
-									<g fill="#000000" fillOpacity="0.55">
+								<svg
+									className="h-4 w-4 fill-current text-black text-opacity-[.55] dark:text-dark-text"
+									height="15"
+									viewBox="0 0 14 15"
+									width="14">
+									<g>
 										<path
 											d="M.399 3.89v-.6h.6c1.87 0 3.76-.783 5.68-2.374l.383-.317.383.317c1.92 1.59 3.81 2.374 5.68 2.374h.6v.6c0 5.633-2.165 9.242-6.473 10.679l-.19.063-.19-.063C2.564 13.132.4 9.523.4 3.89zm6.663-1.743c-1.8 1.4-3.62 2.179-5.455 2.32.135 4.725 1.947 7.648 5.455 8.898 3.508-1.25 5.32-4.173 5.455-8.898-1.835-.141-3.656-.92-5.455-2.32zm-.905 6.477l3.191-3.582.896.798-4.02 4.513-2.472-2.377.831-.865 1.574 1.513z"
 											fillRule="nonzero"
@@ -110,7 +126,7 @@ const ProductBuyInfo = () => {
 							</figure>
 							<div className="w-full">
 								<div className="mb-0.5">
-									<p className="text-sm leading-[1.3]">
+									<p className="text-sm leading-[1.3] text-black text-opacity-[.55] dark:text-dark-text">
 										<span className="text-meli-blue">Compra Protegida</span>, recibí el producto que
 										esperabas o te devolvemos tu dinero.
 									</p>
@@ -119,10 +135,14 @@ const ProductBuyInfo = () => {
 						</div>
 					</li>
 					<li>
-						<div className="flex items-start text-black text-opacity-[.55]">
+						<div className="flex items-start">
 							<figure className="mt-px mr-2.5">
-								<svg className="h-4 w-4" height="14" viewBox="0 0 14 14" width="14">
-									<g fill="#000000" fillOpacity="0.55">
+								<svg
+									className="h-4 w-4 fill-current text-black text-opacity-[.55] dark:text-dark-text"
+									height="14"
+									viewBox="0 0 14 14"
+									width="14">
+									<g>
 										<path
 											d="M7.598 8.746v1.252h.6c1.657 0 3 1.343 3.001 3v.6H2.798v-.602a2.998 2.998 0 0 1 2.998-2.997h.604l-.001-1.253a3.435 3.435 0 0 1-1.578-.724l-1.586-.446-.106-.041-.739-.37A3.6 3.6 0 0 1 .402 3.947V1.599h2.486l-.2-1.2h8.618l-.2 1.2h2.489v2.346a3.6 3.6 0 0 1-1.988 3.22l-.739.37-.106.041-1.592.448a3.43 3.43 0 0 1-1.572.722zm2.65-2.272l.134-.037.688-.345a2.4 2.4 0 0 0 1.326-2.147V2.799h-1.49l-.52 3.13c-.032.187-.078.37-.138.545zm-6.505-.001a3.453 3.453 0 0 1-.139-.552L3.087 2.8H1.602v1.148a2.4 2.4 0 0 0 1.325 2.145l.687.345.129.036zm.361-4.874l.684 4.126a2.24 2.24 0 0 0 2.21 1.874c1.092 0 2.024-.79 2.204-1.868L9.89 1.6H4.104zm4.094 9.6H5.795c-.784 0-1.45.5-1.697 1.199h5.799c-.248-.699-.915-1.2-1.7-1.2z"
 											fillRule="nonzero"
@@ -132,7 +152,7 @@ const ProductBuyInfo = () => {
 							</figure>
 							<div className="w-full">
 								<div className="mb-0.5">
-									<p className="text-sm leading-[1.3]">
+									<p className="text-sm leading-[1.3] text-black text-opacity-[.55] dark:text-dark-text">
 										<span className="text-meli-blue">Mercado Puntos</span>. Sumás 13 puntos.
 									</p>
 								</div>
@@ -141,7 +161,7 @@ const ProductBuyInfo = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="mt-5 flex items-center justify-center border-b border-black border-opacity-10 pb-10 lg:hidden">
+			<div className="mt-5 flex items-center justify-center border-b border-[#ddd] pb-10 dark:border-opacity-10 lg:hidden">
 				<div className="mr-[30px] flex h-5 items-center">
 					<svg className="h-[18px] w-5" height="20" viewBox="0 0 22 20" width="22">
 						<g fill="none" fillRule="evenodd" stroke="#3483FA" strokeWidth="1.5px">

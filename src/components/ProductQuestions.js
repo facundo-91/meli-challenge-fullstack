@@ -2,9 +2,11 @@ const ProductQuestions = () => {
 	return (
 		<div className="flex">
 			<div className="py-10 px-4 lg:py-0 lg:px-[45px]">
-				<h2 className="text-xl leading-tight lg:text-2xl">Preguntas y respuestas</h2>
+				<h2 className="text-xl leading-tight text-black text-opacity-90 dark:text-dark-text lg:text-2xl">
+					Preguntas y respuestas
+				</h2>
 				<div className="mt-6 lg:mt-10">
-					<h3 className="pb-[18px] text-lg font-semibold leading-tight text-black text-opacity-90">
+					<h3 className="pb-[18px] text-lg font-semibold leading-tight text-black text-opacity-90 dark:text-dark-text">
 						¿Qué querés saber?
 					</h3>
 					<div className="-mt-2 -ml-2">
@@ -31,11 +33,13 @@ const ProductQuestions = () => {
 					</div>
 				</div>
 				<div className="mt-10">
-					<p className="text-lg font-semibold text-black text-opacity-90">Preguntale al vendedor</p>
+					<p className="text-lg font-semibold text-black text-opacity-90 dark:text-dark-text">
+						Preguntale al vendedor
+					</p>
 					<div className="mt-4">
 						<div className="flex rounded-md shadow-[0_0_0_1px_rgb(0,0,0,25%)]">
 							<textarea
-								className="block min-h-[64px] grow resize-none rounded-md pt-[15px] pr-3 pb-[13px] pl-4 leading-none"
+								className="block min-h-[64px] grow resize-none rounded-md pt-[15px] pr-3 pb-[13px] pl-4 leading-none placeholder:text-black placeholder:text-opacity-25 dark:bg-[#121212] dark:text-white dark:text-opacity-90 dark:placeholder:text-dark-text dark:placeholder:text-opacity-70"
 								placeholder="Escribí una pregunta..."
 								rows="1"
 							/>
@@ -45,7 +49,7 @@ const ProductQuestions = () => {
 						</button>
 					</div>
 				</div>
-				<div className="my-10 text-center text-black text-opacity-[.55]">
+				<div className="my-10 text-center text-black text-opacity-[.55] dark:text-dark-text dark:text-opacity-70">
 					<p className="text-sm font-semibold">Nadie hizo preguntas todavía.</p>
 					<p className="text-sm">¡Hacé la primera!</p>
 				</div>

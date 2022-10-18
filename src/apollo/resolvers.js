@@ -1,20 +1,25 @@
 export const resolvers = {
 	Query: {
 		products: async (_, args) => {
-			const searchResult = await fetch(
-				`https://api.mercadolibre.com/sites/MLA/search?q=${args.query}&sort=${args.sortOrder}`,
-			)
+			const api = `https://api.mercadolibre.com/sites/MLA/search?q=${args.query}&limit=10&sort=${args.sortOrder}`;
+			const hasFilter = args.filters !== "";
+			const searchURL = hasFilter ? `${api}${args.filters}` : api;
+			const searchResult = await fetch(searchURL)
 				.then((res) => res.json())
 				.then((response) => ({
-					results: response.results.slice(0, 10).map((rawProduct) => ({
+					results: response.results.map((rawProduct) => ({
 						id: rawProduct.id,
 						title: rawProduct.title,
 						price: rawProduct.price,
 						image: `https://http2.mlstatic.com/D_NQ_NP_${rawProduct.thumbnail_id}-V.jpg`,
 						free_shipping: rawProduct.shipping.free_shipping,
+						//category_id: rawProduct.category_id,
 					})),
 					total_products: response.paging.total,
 					sort_order: response.sort.id,
+					filters: response.filters,
+					available_filters: response.available_filters,
+					path_from_root: response.filters[0]?.values[0]?.path_from_root,
 				}));
 
 			return searchResult;

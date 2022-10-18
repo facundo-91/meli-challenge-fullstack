@@ -1,17 +1,26 @@
 import { useEffect, useState } from "react";
 import ClientOnlyPortal from "./ClientOnlyPortal";
+import SearchFilteringModal from "./SearchFilteringModal";
 import SearchSortingModal from "./SearchSortingModal";
 
-const SearchToolbar = ({ sort, sortedBy }) => {
+const SearchToolbar = ({ availableFilters, filters, refetch, sortedBy }) => {
 	const [showSortingModal, setShowSortingModal] = useState(false);
+	const [showFilteringModal, setShowFilteringModal] = useState(false);
 
 	const toggleSortingModal = () => setShowSortingModal(!showSortingModal);
+	const toggleFilteringModal = () => setShowFilteringModal(!showFilteringModal);
 
 	useEffect(() => {
 		showSortingModal
 			? document.body.classList.add("overflow-hidden")
 			: document.body.classList.remove("overflow-hidden");
 	}, [showSortingModal]);
+
+	useEffect(() => {
+		showFilteringModal
+			? document.body.classList.add("overflow-hidden")
+			: document.body.classList.remove("overflow-hidden");
+	}, [showFilteringModal]);
 
 	return (
 		<>
@@ -37,7 +46,7 @@ const SearchToolbar = ({ sort, sortedBy }) => {
 							</div>
 						</div>
 					</li>
-					<li className="flex-auto">
+					<li className="flex-auto cursor-pointer" onClick={() => toggleFilteringModal()}>
 						<div className="h-[52px] text-meli-blue">
 							<div className="mr-2 h-3.5 w-3.5">
 								<svg fill="#3483fa" viewBox="0 0 32 32">
@@ -51,7 +60,15 @@ const SearchToolbar = ({ sort, sortedBy }) => {
 			</div>
 			<ClientOnlyPortal selector="#modal-portal">
 				{showSortingModal && (
-					<SearchSortingModal sort={sort} sortedBy={sortedBy} toggle={toggleSortingModal} />
+					<SearchSortingModal sort={refetch} sortedBy={sortedBy} toggle={toggleSortingModal} />
+				)}
+				{showFilteringModal && (
+					<SearchFilteringModal
+						availableFilters={availableFilters}
+						filterBy={refetch}
+						filters={filters}
+						toggle={toggleFilteringModal}
+					/>
 				)}
 			</ClientOnlyPortal>
 		</>

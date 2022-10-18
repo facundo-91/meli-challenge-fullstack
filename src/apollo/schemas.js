@@ -5,6 +5,9 @@ export const typeDefs = gql`
 		results: [Result]
 		total_products: String
 		sort_order: String
+		filters: [AppliedFilter]
+		available_filters: [Filter]
+		path_from_root: [FilterPath]
 	}
 
 	type Result {
@@ -13,6 +16,36 @@ export const typeDefs = gql`
 		price: Float
 		image: String
 		free_shipping: Boolean
+	}
+
+	type AppliedFilter {
+		id: String
+		name: String
+		type: String
+		values: [AppliedFilterValue]
+	}
+
+	type Filter {
+		id: String
+		name: String
+		type: String
+		values: [FilterValue]
+	}
+
+	type FilterValue {
+		id: String
+		name: String
+		results: Int
+	}
+
+	type AppliedFilterValue {
+		id: String
+		name: String
+	}
+
+	type FilterPath {
+		id: String
+		name: String
 	}
 
 	type Item {
@@ -29,6 +62,6 @@ export const typeDefs = gql`
 
 	type Query {
 		product(id: ID!): Item
-		products(query: String!, sortOrder: String!): SearchResult
+		products(query: String!, sortOrder: String!, filters: String): SearchResult
 	}
 `;

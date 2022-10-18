@@ -13,7 +13,6 @@ export const resolvers = {
 						price: rawProduct.price,
 						image: `https://http2.mlstatic.com/D_NQ_NP_${rawProduct.thumbnail_id}-V.jpg`,
 						free_shipping: rawProduct.shipping.free_shipping,
-						//category_id: rawProduct.category_id,
 					})),
 					total_products: response.paging.total,
 					sort_order: response.sort.id,
